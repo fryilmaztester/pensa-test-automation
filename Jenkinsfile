@@ -36,17 +36,14 @@ pipeline {
             steps {
                 
                 echo('Deploy Test Result Report to s3')
-                sh ''
-
-                 sh """curl -X POST -H 'Content-type: application/json' --data '{"text":"Rapora Ulaşmak İçin: ReportLinki"}' https://hooks.slack.com/services/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"""
-                
+                sh ''    
             }
         }
 
     }
     post{
         always{
-            slackSend( channel: "testautomationreport", token: "TQVutIj4EyynF1ZP7trYMh5J", color: "good", message: "Web Automation Test Report - ")
+            slackSend( channel: "#testautomationreport", token: "TQVutIj4EyynF1ZP7trYMh5J", color: "good", message: "Web Automation Test Report - ")
         }
     }
 
