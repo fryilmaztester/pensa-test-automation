@@ -44,6 +44,11 @@ pipeline {
         }
 
     }
+    post{
+        always{
+            slackSend( channel: "testautomationreport", token: "xoxe.xoxp-1-Mi0yLTYzODUzNDYwODE0NzUtNjQwODIzNjkxNzI0OC02Mzg1ODYyMTI1OTcwLTYzODgzMTI1NTYxNjQtYzI3YmUzNzFlY2E5NjdmMGQ4NDFhYjMwMGM4OGZhYjExYjA2ZTMzYmE4MjU5ZjBmOTFhNTdmNzEzMmIyYWU5Nw", color: "good", message: "Web Automation Test Report - ")
+        }
+    }
 
    
 
