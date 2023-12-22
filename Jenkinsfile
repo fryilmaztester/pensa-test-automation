@@ -6,7 +6,7 @@ pipeline {
 
  parameters {
         
-         choice(name: 'CYPRESS_TAGS', choices: ['@regression', '@smoke' ,'@payment' , '@salespackages', '@register', '@login', '@forgotpassword','@projects'], description: "Choice the tag that you want to execute your scripts")
+         choice(name: 'CYPRESS_TAGS', choices: ['@getFactorial','@smoke'], description: "Choice the tag that you want to execute your scripts")
     }
 
 
